@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <title>SmartShop - Products</title>
+  <link href="./output.css" rel="stylesheet">
+  <script defer src="./js/products.js"></script>
+</head>
+<body class="">
+
+ <!-- Navbar section -->
+  <!-- Navbar section -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+    <!-- Logo -->
+    <a href="index.html" class="text-3xl md:text-4xl font-bold text-green-500">TRAZA</a>
+
+    <!-- Navigation -->
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="index.html" class="text-green-400 font-medium hover:text-blue-600 transition">Home</a>
+      <a href="products.html" class="text-green-400 font-medium hover:text-blue-600 transition">Products</a>
+      <a href="reviews.html" class="text-green-400 font-medium hover:text-blue-600 transition">Reviews</a>
+      <a href="contact.html" class="text-green-400 font-medium hover:text-blue-600 transition">Contact</a>
+
+      <!-- Cart Icon -->
+      <a href="cart.html" class="relative flex items-center text-green-500 font-medium hover:text-blue-600 transition">
+        <i class="fa-solid fa-cart-shopping text-xl mr-1"></i>
+        <span id="cart-count" class="absolute -top-2 -right-3 bg-red-500 text-black text-xs px-2 rounded-full">0</span>
+      </a>
+
+      <!-- Login Button -->
+      <div id="login" class="ml-4 flex items-center">
+        <a href="login.html" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">Login</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-green-500 text-3xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center bg-white shadow-lg">
+    <a href="index.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Home</a>
+    <a href="products.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Products</a>
+    <a href="reviews.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Reviews</a>
+    <a href="contact.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Contact</a>
+    <a href="cart.html" class="py-2 text-green-400 font-medium hover:text-blue-600 flex items-center">
+      <i class="fa-solid fa-cart-shopping mr-2"></i> Cart
+    </a>
+    <a href="login.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Login</a>
+  </div>
+</nav>
+
+
+
+  <section class="container mx-auto py-10">
+    <h2 class="text-4xl font-bold mb-6 text-center">Our Products</h2>
+    <div class="text-center mb-7">
+  <select id="sort-products" class="border px-3 py-2 rounded">
+    <option value="default">Sort By</option>
+    <option value="low">Price: Low to High</option>
+    <option value="high">Price: High to Low</option>
+  </select>
+</div>
+
+    <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-gray-300 pt-16">
+      <!-- top footer
+        -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+      
+      <!-- Logo + Address -->
+      <div>
+        <div class="flex items-center mb-4">
+          <div class="bg-green-400 text-white rounded-lg w-8 h-8 flex items-center justify-center font-bold">T</div>
+          <h2 class="text-3xl font-bold text-black ml-2">TRAZA</h2>
+        </div>
+        <p class=" mb-4">Kumira,Shitakundo<br>Chattogram</p>
+        <hr class="border-black-300 mb-4">
+        <div class="flex space-x-3">
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Find product -->
+      <div>
+        <h3 class="text-lg font-bold  mb-4">Find product</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="products.html" class="hover:text-green-500">The televation</a></li>
+          <li><a href="products.html" class="hover:text-green-500">Mens Jacket</a></li>
+          <li><a href="products.html" class="hover:text-green-500">Silicon Power </a></li>
+          <li><a href="products.html" class="hover:text-green-500">Automatic watch</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Get help -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Get help</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="About.html" class="hover:text-green-500">About us</a></li>
+          <li><a href="contact.html" class="hover:text-green-500">Contact us</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Return policy</a></li>
+          <li><a href="privacy.html" class="hover:text-green-500">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: About us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">About us</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="#" class="hover:text-green-500">News</a></li>
+          <li><a href="#" class="hover:text-green-500">Service</a></li>
+          <li><a href="#" class="hover:text-green-500">Our policy</a></li>
+          <li><a href="#" class="hover:text-green-500">Customer care</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copy bg-gray-900 text-white text-center py-6 ">
+      <p>&copy; 2025 TRAZA | All Rights Reserved</p>
+    </div>
+  </footer>
+<script src="products.js"></script>
+</body>
+</html>

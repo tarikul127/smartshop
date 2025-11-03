@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRAZA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+
+<body class="">
+
+  <!-- Navbar section -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+    <!-- Logo -->
+    <a href="index.html" class="text-3xl md:text-4xl font-bold text-green-500">TRAZA</a>
+
+    <!-- Navigation -->
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="index.html" class="text-green-400 font-medium hover:text-blue-600 transition">Home</a>
+      <a href="products.html" class="text-green-400 font-medium hover:text-blue-600 transition">Products</a>
+      <a href="reviews.html" class="text-green-400 font-medium hover:text-blue-600 transition">Reviews</a>
+      <a href="contact.html" class="text-green-400 font-medium hover:text-blue-600 transition">Contact</a>
+      <a href="about.html" class="text-green-400 font-medium hover:text-blue-600 transition">About Us</a>
+
+      <!-- Cart Icon -->
+      <a href="cart.html" class="relative flex items-center text-green-500 font-medium hover:text-blue-600 transition">
+        <i class="fa-solid fa-cart-shopping text-xl mr-1"></i>
+        <span id="cart-count" class="absolute -top-2 -right-3 bg-red-500 text-black text-xs px-2 rounded-full">0</span>
+      </a>
+
+      <!-- Login Button -->
+      <div id="login" class="ml-4 flex items-center">
+        <a href="login.html" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">Login</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-green-500 text-3xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center bg-white shadow-lg">
+    <a href="index.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Home</a>
+    <a href="products.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Products</a>
+    <a href="reviews.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Reviews</a>
+    <a href="contact.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Contact</a>
+    <a href="about.html" class="text-green-400 font-medium hover:text-blue-600 transition">About Us</a>
+    <a href="cart.html" class="py-2 text-green-400 font-medium hover:text-blue-600 flex items-center">
+      <i class="fa-solid fa-cart-shopping mr-2"></i> Cart
+    </a>
+    <a href="login.html" class="py-2 text-green-400 font-medium hover:text-blue-600">Login</a>
+  </div>
+</nav>
+
+
+
+
+  <!-- Banner -->
+  <section class="relative h-[600px] w-full overflow-hidden z-0">
+
+    <!-- Slide 1 -->
+    <div class="slide absolute inset-0 bg-[url('./photo/banner.jpg')] bg-center bg-cover transition-opacity opacity-100 duration-1000 flex flex-col items-center justify-center text-black text-center">
+      <h1 class="text-6xl font-bold mb-4 drop-shadow-lg">Welcome to <span class="text-green-700">TRAZA</span></h1>
+      <p class="text-lg mb-6 drop-shadow">Find the best deals every day!</p>
+      <a href="products.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-400">Shop Now</a>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide absolute inset-0 bg-[url('./photo/banner1.jpg')] bg-center bg-cover transition-opacity opacity-100 duration-1000 flex flex-col items-center justify-center text-black text-center">
+      <h1 class="text-6xl font-bold mb-4 drop-shadow-lg">Create Your Vibe With <span class="text-green-700">TRAZA</span></h1>
+      <p class="text-lg mb-6 drop-shadow">Discover unique collections for you!</p>
+      <a href="products.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Shop Now</a>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide absolute inset-0 bg-[url('./photo/banner2.jpg')] bg-center bg-cover transition-opacity opacity-100 duration-1000 flex flex-col items-center justify-center text-black text-center">
+      <h1 class="text-6xl font-bold mb-4 drop-shadow-lg">Wear Your Own Style With <span class="text-green-700">TRAZA</span></h1>
+      <p class="text-lg mb-6 drop-shadow">Trendy outfits that define you!</p>
+      <a href="products.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Shop Now</a>
+    </div>
+
+    <!-- Slide Controls -->
+    <button id="prev"
+      class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full">
+      &#10094;
+    </button>
+    <button id="next"
+      class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full">
+      &#10095;
+    </button>
+  </section>
+  <!-- product section -->
+  <section class="container mx-auto py-16 relative bg-gray-50 z-10">
+  <h2 class="text-5xl font-bold mb-6 text-center text-green-400"> Products</h2>
+
+  <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+</section>
+
+
+<!--  Popular products -->
+  <section class="container mx-auto py-16 relative bg-gray-50 z-10">
+  <h2 class="text-5xl font-bold mb-6 text-center text-green-400"> Popular Products</h2>
+
+  <div id="product-container1" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+</section>
+
+  
+  <!-- offer section -->
+    <h2 class="text-5xl font-bold mb-10 text-center text-green-400">Best New Offer</h2>
+
+<!-- SECTION 1 -->
+<section class="container mx-auto py-16 bg-slate-300 rounded-2xl shadow-md mb-10">
+  <div class="flex flex-col md:flex-row items-center justify-between">
+    <!-- Left: Product image -->
+    <div class="md:w-1/2 flex justify-center md:justify-start">
+      <img src="./photo/p.png"alt="offer product" class="rounded-lg w-[300px] md:w-[400px] md:pl-[100px]">
+    </div>
+
+    <!-- Right: Text content -->
+    <div class="text-center md:text-left mt-8 md:mt-0 md:pr-[100px]">
+      <h3 class="text-3xl font-bold mb-2">The Television</h3>
+      <h1 class="text-4xl font-bold text-green-600 mb-4">Sale up to 50% off</h1>
+      <p class="mb-6">32 inch HD display</p>
+      <a href="products.html" 
+         class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-blue-400 transition">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="container mx-auto py-16 bg-violet-300 rounded-2xl shadow-md mb-10">
+  <div class="flex flex-col md:flex-row items-center justify-between">
+    <!-- Left: Product image -->
+     <div class="text-center md:text-left mt-8 md:mt-0 md:pl-[100px]">
+      <h3 class="text-3xl font-bold mb-2">Ring</h3>
+      <h1 class="text-4xl font-bold text-green-600 mb-4">Sale up to 30% off</h1>
+      <p class="mb-6">diamond ring</p>
+      <a href="products.html" 
+         class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-blue-400 transition">Shop Now</a>
+    </div>
+
+    <!-- Right: Text content -->
+     <div class="md:w-1/2 flex justify-center md:justify-start">
+      <img src="./photo/p1.png"alt="offer product" class="rounded-lg w-[300px] md:w-[400px] md:pl-[100px]">
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- service section  -->
+    <h2 class="text-5xl font-bold mb-10 text-center text-green-400">Our Service</h2>
+   <section class="py-8" id="servers">
+  <div class=" mx-auto grid grid-cols-1 md:grid-cols-4 text-center md:divide-y-0 md:divide-x ">
+    
+    <!-- Free Delivery -->
+    <div class="flex flex-col items-center justify-center py-6 px-4">
+      <i class="fa-solid fa-truck-fast text-black-500 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-green-500 text-lg">Free delivery</h3>
+      <p class=" text-sm">On order above $50.00</p>
+    </div>
+
+    <!-- Best Quality -->
+    <div class="flex flex-col items-center justify-center py-6 px-4">
+      <i class="fa-solid fa-medal text-black-500 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-green-500 text-lg">Best quality</h3>
+      <p class=" text-sm">Best quality in low price</p>
+    </div>
+
+    <!-- 1 Year Warranty -->
+    <div class="flex flex-col items-center justify-center py-6 px-4">
+      <i class="fa-solid fa-shield-halved text-black-500 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-green-500 text-lg">1 Year warranty</h3>
+      <p class=" text-sm">Available warranty</p>
+    </div>
+
+    <!-- Best Service -->
+    <div class="flex flex-col items-center justify-center py-6 px-4">
+      <i class="fa-solid fa-headset text-black-500 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-green-500 text-lg">Best service</h3>
+      <p class=" text-sm">3 free service</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- reviews -->
+   <section class="container py-20 px-4 mx-auto">
+    <h2 class="text-4xl mb-10 font-bold text-green-500 py-10 text-center">What Customer Says About Us</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Review 1 -->
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <div class="flex mb-3 items-center">
+          <img src="https://i.pravatar.cc/80?img=1" class="w-12 h-12 mr-3 rounded-full">
+          <div>
+            <h3 class="font-semibold px-3">Sarah Ali kan</h3>
+            <div class="px-3">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700">TRAZA has amazing quality products! My order came on time and the packaging was perfect. Highly recommend!</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <div class="flex items-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=2" class="w-12 h-12 mr-3 rounded-full">
+          <div>
+            <h3 class="font-semibold px-3">Rafiul Hasan</h3>
+            <div class="px-3">
+              ★★★★☆
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700">Great service and good pricing. The product quality is solid. I’ll definitely shop again!</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white shadow-lg p-6 rounded-xl">
+        <div class="flex items-center mb-3">
+          <img src="https://i.pravatar.cc/80?img=3" class="w-12 h-12 mr-3 rounded-full">
+          <div>
+            <h3 class="font-semibold px-3">Nusrat Jahan</h3>
+            <div class="px-3">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700">Absolutely loved the shopping experience! The website is easy to use and the clothes are just perfect!</p>
+      </div>
+
+  </section>
+
+
+  <!-- Subscribe newsletter -->
+  <section class="container py-20 mx-auto bg-sky-100 py-10 px-8 rounded-xl shadow-sm max-w-6xl mx-auto mt-16 flex flex-col md:flex-row justify-between items-center gap-6">
+    <!-- Left: Text -->
+    <h2 class="text-3xl font-bold ">Subscribe newsletter</h2>
+
+    <!-- Middle: Email input -->
+    <div class="flex w-full md:w-1/2">
+      <input type="email" placeholder="Enter your mail.."class="flex-grow px-3 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-400"/>
+      <button class="bg-green-400 text-white px-5 rounded-r-lg hover:bg-yellow-500">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+
+    <!-- Right: Contact info -->
+    <div class="flex items-center space-x-3">
+      <div>
+        <p class=" text-sm">Call us 24/7:</p>
+        <p class="text-green-400 font-semibold">01608603125</p>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <!-- Footer -->
+    <footer class="bg-gray-300 pt-16">
+      <!-- top footer
+        -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+      
+      <!-- Logo + Address -->
+      <div>
+        <div class="flex items-center mb-4">
+          <div class="bg-green-400 text-white rounded-lg w-8 h-8 flex items-center justify-center font-bold">T</div>
+          <h2 class="text-3xl font-bold text-black ml-2">TRAZA</h2>
+        </div>
+        <p class=" mb-4">Kumira,Shitakundo<br>Chattogram</p>
+        <hr class="border-black-300 mb-4">
+        <div class="flex space-x-3">
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="border border-black-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-400 hover:text-white transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Find product -->
+      <div>
+        <h3 class="text-lg font-bold  mb-4">Find product</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="products.html" class="hover:text-green-500">The televation</a></li>
+          <li><a href="products.html" class="hover:text-green-500">Mens Jacket</a></li>
+          <li><a href="products.html" class="hover:text-green-500">Silicon Power </a></li>
+          <li><a href="products.html" class="hover:text-green-500">Automatic watch</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Get help -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Get help</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="About.html" class="hover:text-green-500">About us</a></li>
+          <li><a href="contact.html" class="hover:text-green-500">Contact us</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Return policy</a></li>
+          <li><a href="privacy.html" class="hover:text-green-500">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: About us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">About us</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><a href="#" class="hover:text-green-500">News</a></li>
+          <li><a href="servers" class="hover:text-green-500">Service</a></li>
+          <li><a href="return.html" class="hover:text-green-500">Our policy</a></li>
+          <li><a href="#" class="hover:text-green-500">Customer care</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copy bg-gray-900 text-white text-center py-6 ">
+      <p>&copy; 2025 TRAZA | All Rights Reserved</p>
+    </div>
+  </footer>
+ 
+
+<script src="./js/home.js"></script>
+<script src="./js/login.js"></script>
+
+</body>
+</html>

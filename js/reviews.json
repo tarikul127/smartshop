@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Rafi Khan",
+    "comment": "Great quality and fast delivery!",
+    "rating": 5,
+    "date": "2025-10-20"
+  },
+  {
+    "name": "Mehnaz Rahim",
+    "comment": "Customer service was super friendly.",
+    "rating": 4,
+    "date": "2025-10-22"
+  },
+  {
+    "name": "Tahmid Hasan",
+    "comment": "Affordable and stylish products.",
+    "rating": 5,
+    "date": "2025-10-25"
+  }
+]
